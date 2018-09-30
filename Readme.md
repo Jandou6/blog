@@ -1,4 +1,4 @@
-# test
+# Blog
 
 A TSSPA project.
 
@@ -26,3 +26,7 @@ yarn build
 ```bash
 yarn start:prod
 ```
+
+TODO:
+- [ ] 脚本自动生成文章路由路径
+- [ ] 博客上线

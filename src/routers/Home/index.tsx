@@ -1,48 +1,37 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import * as CSSModules from 'react-css-modules';
-const style = require('./style');
+import TopNavComponent from '../../components/top_nav';
 import { Link } from 'react-router-dom';
-@CSSModules(style, {allowMultiple: true})
+import { article_list } from '../Articles';
+const style = require('./style');
+
+@CSSModules(style, { allowMultiple: true })
 class HomeComponent extends React.Component {
   render() {
     return (
-      <div styleName="home-page">
-        <h1>List</h1>
-        <hr/>
-        <nav styleName="nav">
-          <ul>
-            <li>
-              Home
-            </li>
-            <li>
-            <Link to={'/about'}>About</Link>
-            </li>
-            <li>
-              Relate
-            </li>
-          </ul>
-        </nav>
-        <hr/>
+      <div className="page" styleName="home-page" >
+        <TopNavComponent title="最近文章" />
         <ul styleName="article-list">
-        {[1, 2, 3, 4, 5, 6].map((item) => {
-          return (
-            <li styleName="article-item" key={item}>
-              <div styleName="article-content">
-                <h4>文章{item}</h4>
-                <time>{ this.render_date() }</time>
-              </div>
-          </li>
-          );
-        })}
+          {article_list.map((item) => {
+            return (
+              <li styleName="article-item" key={item.title}>
+                <Link to={ item.link }>
+                  <div styleName="article-content">
+                    <h4>{item.title}</h4>
+                    <time>{this.render_date(item.date)}</time>
+                  </div>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     );
   }
 
-  render_date() {
-    const date = new Date();
-    return `${date.getFullYear()}-${ date.getMonth() + 1 }-${date.getDate()}`;
+  render_date(date:Date) {
+    return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
   }
 }
 

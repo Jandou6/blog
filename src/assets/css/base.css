@@ -13,8 +13,12 @@
   }
   .web-size {
     width: 1000px;
-    max-width: 1000px;
+    max-width: 80vw;
     min-height:100vh;
     margin:0 auto;
+  }
+  .page {
+    padding-top: 20px;
+    color: #666;
   }
 }

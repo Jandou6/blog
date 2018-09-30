@@ -1,15 +1,4 @@
 .home-page{
-  color: #666;
-  .nav {
-    height:40px;
-    li {
-      height: 40px;
-      line-height: 40px;
-      display: block;
-      margin-right:20px;
-      float: left;
-    }
-  }
   .article-list {
     .article-item {
       margin-bottom:5px;
@@ -19,7 +8,7 @@
       }
       .article-content {
         h4 {
-          text-decoration: underline;
+          border-bottom:1px solid #000;
         }
         display: flex;
         justify-content: space-between;

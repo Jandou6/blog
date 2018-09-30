@@ -1,0 +1,11 @@
+.nav {
+  height:40px;
+  li {
+    color:#666;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    margin-right:20px;
+    float: left;
+  }
+}

@@ -9,18 +9,22 @@ import '../assets/css/base';
 import { hot } from 'react-hot-loader';
 
 import * as Loadable from 'react-loadable';
+
+const loadingComponent = () => (<div>Loading....</div>);
+
 const HomeComponent = Loadable({
   loader: () => import('./Home' /* webpackChunkName:"home" */),
-  loading() {
-    return <div>Loading....</div>;
-  },
+  loading: loadingComponent,
 });
 
 const AboutComponent = Loadable({
   loader: () => import('./About' /* webpackChunkName:"about" */),
-  loading() {
-    return <div>Loading....</div>;
-  },
+  loading: loadingComponent,
+});
+
+const article_2018_10_01 = Loadable({
+  loader: () => import('./Articles/2018-10-01' /* webpackChunkName:"article_2018_10_01" */),
+  loading: loadingComponent,
 });
 
 export class RouterComp extends React.Component {
@@ -31,6 +35,7 @@ export class RouterComp extends React.Component {
           <Switch>
             <Route exact path="/" component={HomeComponent} />
             <Route exact path="/about" component={AboutComponent} />
+            <Route exact path="/article_2018_10_01" component={article_2018_10_01} />
           </Switch>
         </Router>
       </div>
