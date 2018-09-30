@@ -1,0 +1,29 @@
+.home-page{
+  color: #666;
+  .nav {
+    height:40px;
+    li {
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      margin-right:20px;
+      float: left;
+    }
+  }
+  .article-list {
+    .article-item {
+      margin-bottom:5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #ccc;
+      }
+      .article-content {
+        h4 {
+          text-decoration: underline;
+        }
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
