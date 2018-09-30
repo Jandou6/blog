@@ -34,6 +34,7 @@
     "postcss-loader": "^2.1.4",
     "postcss-nested": "^4.1.0",
     "react-hot-loader": "^4.3.3",
+    "react-snap": "^1.19.0",
     "resolve-url-loader": "^2.3.0",
     "style-loader": "^0.21.0",
     "tslint": "^5.9.1",
@@ -53,12 +54,19 @@
     "react-loadable": "^5.3.1",
     "react-router-dom": "^4.2.2"
   },
+  "reactSnap": {
+    "source": "dist",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "sourceMaps": false
+    }
+  },
   "scripts": {
     "test": "echo hello test",
     "dev": "yarn start",
     "clean": "rm -rf ./dist",
     "start": " ./scripts/dev_server.sh",
     "start:prod": "node ./bin/server.js",
-    "build": "yarn clean && cross-env NODE_ENV=production webpack --progress"
+    "build": "yarn clean && cross-env NODE_ENV=production webpack --progress && react-snap"
   }
 }

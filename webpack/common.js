@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(css)$/,
         exclude: /node_modules/,
         use: [
-          is_dev ? 'css-hot-loader' : '',
+          is_dev ? 'css-hot-loader' : eval(),
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
@@ -47,13 +47,13 @@ module.exports = {
             },
           },
           'postcss-loader',
-        ],
+        ].filter((item) => item)
       },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: is_dev ? '[chunkname].css' : '[chunkname].[hash].css',
+      filename: is_dev ? '[name].css' : '[name].[hash].css',
       chunkFilename: is_dev ? '[name].css' : '[name].[hash].css',
     })
   ],

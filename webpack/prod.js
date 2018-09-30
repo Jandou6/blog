@@ -28,7 +28,6 @@ module.exports = {
       chunks: ['app', 'commons'],
       favicon: CONFIG.FAVICON_PATH,
       template: CONFIG.HTML_TEMPLATE_PATH,
-      hash: true,
       minify: {
         removeAttributeQuotes: true,
         collapseWhitespace: true,
