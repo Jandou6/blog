@@ -8,7 +8,7 @@
     text-decoration: none;
     color:inherit;
   }
-  li {
+  ul li {
     list-style-type: none;
   }
   .web-size {
@@ -20,5 +20,26 @@
   .page {
     padding-top: 20px;
     color: #666;
+  }
+  .article-body {
+  }
+  section {
+    margin: 40px 0;
+    &::after {
+      content:'';
+      display:block;
+      height:10px;
+      border-bottom: 1px dotted #ccc;
+    }
+  }
+  pre {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  strong {
+    color:#000;
+    font-weight:bolder;
   }
 }

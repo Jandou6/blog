@@ -7,12 +7,13 @@ const style = require('./style');
 interface TopNavProps {
   title:string;
 }
+
 @CSSModules(style, { allowMultiple: true })
 class TopNavComponent extends React.Component<TopNavProps, {}> {
   render() {
     return (
       <>
-        <h1>Jandou's Blog For FrontEnd</h1>
+        <h1><Link to={'/'}>Jandou's Blog For FrontEnd</Link></h1>
         <hr />
         <nav styleName="nav">
           <ul>
