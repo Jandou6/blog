@@ -67,6 +67,7 @@
     "clean": "rm -rf ./dist",
     "start": " ./scripts/dev_server.sh",
     "start:prod": "node ./bin/server.js",
-    "build": "yarn clean && cross-env NODE_ENV=production webpack --progress && react-snap"
+    "build": "yarn clean && cross-env NODE_ENV=production webpack --progress && react-snap",
+    "upload": "./scripts/publish.sh"
   }
 }

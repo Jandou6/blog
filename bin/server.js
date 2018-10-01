@@ -4,7 +4,9 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 
-app.use(express.static(path.resolve(__dirname,'../dist')));
+app.use(express.static(path.resolve(__dirname,'../dist'), {
+  maxAge: '1y',
+}));
 app.use(function (req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 })
