@@ -1,3 +1,6 @@
+// created time is <2018-10-01/>.
+// title is <JavaScript模块化的历史>.
+// tag is <[javascript, module]>.
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import * as CSSModules from 'react-css-modules';

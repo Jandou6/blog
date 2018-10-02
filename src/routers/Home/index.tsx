@@ -11,7 +11,7 @@ class HomeComponent extends React.Component {
   render() {
     return (
       <div className="page" styleName="home-page" >
-        <TopNavComponent title="最近文章" />
+        <TopNavComponent subtitle="最近文章" title="Jandou's Blog For FrontEnd" />
         <ul styleName="article-list">
           {article_list.map((item) => {
             return (

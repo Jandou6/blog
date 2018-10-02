@@ -26,20 +26,22 @@ const article_2018_10_01 = Loadable({
   loader: () => import('./Articles/2018-10-01' /* webpackChunkName:"article_2018_10_01" */),
   loading: loadingComponent,
 });
+const article_2018_10_03 = Loadable({
+  loader: () => import('./Articles/2018-10-03' /* webpackChunkName:"article_2018_10_03" */),
+  loading: loadingComponent,
+});
 
 export class RouterComp extends React.Component {
   render() {
     return (
-      <div className="web-size">
-        <Router>
-          <Switch>
-            <Route exact path="/" component={HomeComponent} />
-            <Route exact path="/about" component={AboutComponent} />
-            <Route exact path="/article_2018_10_01" component={article_2018_10_01} />
-          </Switch>
-        </Router>
-      </div>
-
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomeComponent} />
+          <Route exact path="/about" component={AboutComponent} />
+          <Route exact path="/article_2018_10_01" component={article_2018_10_01} />
+          <Route exact path="/article_2018_10_03" component={article_2018_10_03} />
+        </Switch>
+      </Router>
     );
   }
 }

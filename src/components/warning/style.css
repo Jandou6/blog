@@ -1,0 +1,12 @@
+.waring-wrap {
+  background:#ffa2a2;
+  position:fixed;
+  top:0;
+  left:0;
+  min-height:30px;
+  width:100vw;
+  line-height:30px;
+  box-sizing:border-box;
+  padding:0 20px;
+  color:#ec2a2a;
+}
