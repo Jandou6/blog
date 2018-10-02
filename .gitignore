@@ -3,3 +3,4 @@ webpack/dll/*
 dist
 *.log
 scripts/publish.sh
+.DS_Store
