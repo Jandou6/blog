@@ -8,9 +8,6 @@ app.use(compression());
 app.use(express.static(path.resolve(__dirname,'../dist'), {
   maxAge: '1y',
 }));
-app.use(function (req, res) {
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
-})
 var server = http.createServer(app);
 server.listen(PORT, function() {
   console.log("Listening on http://127.0.0.1:%j", server.address().port);

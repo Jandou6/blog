@@ -8,6 +8,10 @@
       }
       .article-content {
         h4 {
+          max-width:50vw;
+          overflow-x:hidden;
+          text-overflow: ellipsis;
+          white-space:nowrap;
           border-bottom:1px solid #000;
         }
         display: flex;
