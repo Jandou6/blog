@@ -35,6 +35,11 @@ const article_2018_10_10 = Loadable({
   loading: loadingComponent,
 });
 
+const article_2018_11_19 = Loadable({
+  loader: () => import('./Articles/2018-11-19' /* webpackChunkName:"article_2018_11_19" */),
+  loading: loadingComponent,
+});
+
 export class RouterComp extends React.Component {
   render() {
     return (
@@ -45,6 +50,7 @@ export class RouterComp extends React.Component {
           <Route exact path="/article_2018_10_01" component={article_2018_10_01} />
           <Route exact path="/article_2018_10_03" component={article_2018_10_03} />
           <Route exact path="/article_2018_10_10" component={article_2018_10_10} />
+          <Route exact path="/article_2018_11_19" component={article_2018_11_19} />
         </Switch>
       </Router>
     );

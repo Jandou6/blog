@@ -21,4 +21,9 @@ export const article_list:Article[] = [
     date: new Date(1539184644453),
     link: '/article_2018_10_10',
   },
+  {
+    title: 'react源码分析（二）———— ReactDOM.render',
+    date: new Date(1539619551508),
+    link: '/article_2018_11_19',
+  },
 ];

@@ -1,0 +1,11 @@
+section a {
+  color: #999;
+  text-decoration: underline;
+}
+.img-wrap {
+  img {
+    width:auto;
+    margin: 0 auto;
+    display:block;
+  }
+}
