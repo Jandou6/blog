@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch,
 } from 'react-router-dom';
 import '../assets/css/base';
@@ -31,7 +30,7 @@ const article_2018_10_03 = Loadable({
   loading: loadingComponent,
 });
 const article_2018_10_10 = Loadable({
-  loader: () => import('./Articles/2018-10-10' /* webpackChunkName:"article_2018_10_010" */),
+  loader: () => import('./Articles/2018-10-10' /* webpackChunkName:"article_2018_10_10" */),
   loading: loadingComponent,
 });
 
@@ -39,6 +38,8 @@ const article_2018_11_19 = Loadable({
   loader: () => import('./Articles/2018-11-19' /* webpackChunkName:"article_2018_11_19" */),
   loading: loadingComponent,
 });
+
+// append article.
 
 export class RouterComp extends React.Component {
   render() {
