@@ -1,4 +1,4 @@
-// created time is <2018-10-010/>.
+// created time is <2018-10-10/>.
 // title is <react源码分析（一）>.
 // tag is <[react]>.
 import * as React from 'react';
