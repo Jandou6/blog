@@ -1,3 +1,14 @@
 .about-page{
   color: #666;
+  .info-wrap {
+    li {
+      display:block;
+      margin: 12px 0;
+    }
+    a {
+      &:hover {
+        color: blue;
+      }
+    }
+  }
 }
